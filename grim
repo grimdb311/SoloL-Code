@@ -1,0 +1,47 @@
+MINESWEEPER GAME 
+
+I created this game to refresh my web skills and practice logical thinking. The design is simple and I only used alerts. I'm not sure if I was able to do the complete logic of the game. Please add a comment if you happen to find any logical errors.
+
+created by Jonathan Pizarra
+started on January 8, 2019
+finished on ... v1.2.6 completed January 13, 2019 7:15pm
+
+v1.0.0 - started the main code logic. played the game a few times to get the gameplay...
+v1.1.0 - completely dumped the contextmenu event for flagging coz of highlighting behavior on mobile. used a boolean variable instead.
+v1.2.0 - added the styles.
+v1.2.2 - made the td size fixed.
+v1.2.3 - used media queries .... dumped media queries
+v1.2.6 - added timer ... found a logical error in a certain case. maximum stack exceeded error in zeroMines function ...
+v1.2.7 - fixed the error... incomplete logic:first click should never be a mine.
+       - added the first click checker. First click is now safe.
+       - added restart button as requested.
+v2.0.0 - removed the table because of different css behaviors on some devices. used a div as container and pre for cells.
+
+       TO DO: Optimize checkCoordinates function to return boolean and mine index
+-->
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Minesweeper</title>
+        <script src="https://code.jquery.com/jquery-3.3.1.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/prefixfree/1.0.7/prefixfree.min.js"></script>
+        <link href="https://fonts.googleapis.com/css?family=Play:700" rel="stylesheet">
+    </head>
+    <body>
+    <main>
+        <div id="version">MINESWEEPER v 2.0.0</div>
+        <div id="buttons">
+            <div id="stats">🚩 : </div>
+            <div id="buts">
+                <button id="flag">🚩</button>
+                <button id="count">👆</button>
+            </div>
+            <div id="time">00 : 00</div>
+        </div>
+        <div id="cont">
+        <div id="tab" contenteditable="false"></div>
+        </div>
+        <button id="restart">RESTART</button>
+    </main>
+    </body>
+</html>
